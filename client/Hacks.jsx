@@ -1,11 +1,10 @@
-const { Link } = ReactRouter;
-
 Hacks = React.createClass({
   mixins: [ReactMeteorData],
 
   getMeteorData: function() {
     return {
-      hacks: Meteor.user().profile.hacks
+      hacks: HacksCollection.find({}).fetch(),
+      userHacks: Meteor.user().profile.hacks
     };
   },
 
@@ -17,9 +16,12 @@ Hacks = React.createClass({
     return (
       <div className="row">
         <h2>
-          You've judged {this.data.hacks.length} hacks.
+          You've judged {this.data.userHacks.length} hacks.
         </h2>
-        <UserHacks hacks={this.data.hacks} />
+
+        <input id="shit" type="text"/>
+
+        <UserHacks hacks={this.data.userHacks} />
       </div>
     );
   }

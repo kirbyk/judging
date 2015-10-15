@@ -21,3 +21,4 @@ insecure                # Allow all DB writes from clients (for prototyping)
 accounts-password
 react
 reactrouter:react-router
+sergeyt:typeahead
