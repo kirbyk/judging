@@ -15,7 +15,6 @@ Routes = React.createClass({
           <Route path="login" component={Login}/>
           <Route component={AuthenticatedApp}>
             <Route path="judging" component={Judging}/>
-            <Route path="comparison/:id/new" component={NewComparison}/>
             <Route path="manage" component={Manage}/>
           </Route>
         </Route>
